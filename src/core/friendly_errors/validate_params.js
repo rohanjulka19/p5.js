@@ -610,10 +610,11 @@ if (typeof IS_MINIFIED !== 'undefined') {
         const myError = new Error();
         let parsed = p5._getErrorStackParser().parse(myError);
         if (
-          parsed[3] &&
+          (parsed[3] &&
           parsed[3].functionName &&
           parsed[3].functionName.includes('.') &&
-          p5.prototype[parsed[3].functionName.split('.').slice(-1)[0]]
+          p5.prototype[parsed[3].functionName.split('.').slice(-1)[0]])
+          || (!parsed[3].functionName && !p5._throwValidationErrors)
         ) {
           return;
         }

@@ -880,7 +880,7 @@ p5.prototype.resetShader = function () {
  * Note: `texture()` can only be used in WebGL mode.
  *
  * @method texture
- * @param {p5.Image|p5.MediaElement|p5.Graphics|p5.Texture|p5.Framebuffer|p5.FramebufferTexture} tex media to use as the texture.
+ * @param {p5.Image|p5.MediaElement|p5.Graphics|p5.Texture|p5.Framebuffer|p5.FramebufferTexture|p5.Renderer} tex media to use as the texture.
  * @chainable
  *
  * @example
